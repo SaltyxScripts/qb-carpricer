@@ -41,6 +41,9 @@ RegisterNetEvent('carpricer:client:price', function(price, shopname)
     if name == nil then
         name = 'Unknown'
     end
+    if brandname == nil then
+        brandname = 'Unknown'
+    end
 
     local text = "{['model'] = '" .. model .. "', ['name'] = '" .. name .. "', ['brand'] = '" .. brand .. "', ['price'] = " .. price .. ", ['categoryLabel'] = '" .. categoryLabel .. "', ['shop'] = '" .. shop .. "'},\n"
     DeleteEntity(vehicle)
